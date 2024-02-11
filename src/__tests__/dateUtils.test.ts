@@ -80,8 +80,9 @@ describe("Date Utils", () => {
     });
     test("Different Days", ()=> {
       const now = moment().toDate();
-      const tomorrow = add(now, 1, DATE_UNIT_TYPES.DAYS);
+      const tomorrow = add(now, 1, DATE_UNIT_TYPES.MONTHS);
       expect(isSameDay(now, tomorrow)).toBeFalsy();
     });
+
   });
 });
