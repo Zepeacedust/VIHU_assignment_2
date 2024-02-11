@@ -1,7 +1,7 @@
 import moment, { DurationInputArg1, Moment } from "moment";
 import { DATE_UNIT_TYPES } from "./constants";
 
-export function getCurrentYear() : Number{
+export function getCurrentYear() : Number {
   return moment().year();
 }
 
