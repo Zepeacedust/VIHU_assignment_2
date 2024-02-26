@@ -19,4 +19,5 @@ jobs:
     - name: 'Report Coverage'
       # Set if: always() to also generate the report if tests are failing
       # Only works if you set `reportOnFailure: true` in your vite config as specified above
-      run: cat /home/runner/work/VIHU_assignment_2/VIHU_assignment_2/coverage/coverage-summary.json
+      if: always() 
+      uses:  davelosert/vitest-coverage-report-action@v2
