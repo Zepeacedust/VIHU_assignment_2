@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Typescript compiler
-      - run: tsc -p ./tsconfig.json 
+        run: tsc -p ./tsconfig.json 
   test:
     runs-on: ubuntu-latest
     steps:
