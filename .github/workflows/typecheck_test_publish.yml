@@ -16,10 +16,12 @@ jobs:
       run: npm install
     - name: 'debug'
       run: pwd
-    - name: 'oh god why'
-      run: ls 
     - name: 'Test'
       run: npm test --coverage.enabled true
+    - name: 'oh god why'
+      run: ls
+    - name: 'oh god why2'
+      run: ls coverage
     - name: 'Report Coverage'
       # Set if: always() to also generate the report if tests are failing
       # Only works if you set `reportOnFailure: true` in your vite config as specified above
