@@ -15,7 +15,7 @@ jobs:
     - name: 'Install Deps'
       run: npm install
     - name: 'Test'
-      run: npm vitest --coverage.enabled true
+      run: npm test --coverage.enabled true
     - name: 'Report Coverage'
       # Set if: always() to also generate the report if tests are failing
       # Only works if you set `reportOnFailure: true` in your vite config as specified above
