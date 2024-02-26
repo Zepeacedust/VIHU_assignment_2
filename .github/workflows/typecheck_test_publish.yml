@@ -7,7 +7,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Vitest Coverage Report
-  # You may pin to the exact commit or the version.
-  # uses: davelosert/vitest-coverage-report-action@e93ba7d37d24899cc65c5525a1eefd89ae5cf365
-        uses: davelosert/vitest-coverage-report-action@v2.2.1
+    - uses: actions/checkout@v4
+    - name: 'Install Node'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+    - name: 'Install Deps'
+      run: npm install
+    - name: 'Test'
+      run: npx vitest --coverage.enabled true
+    - name: 'Report Coverage'
+      # Set if: always() to also generate the report if tests are failing
+      # Only works if you set `reportOnFailure: true` in your vite config as specified above
+      if: always() 
+      uses:  davelosert/vitest-coverage-report-action@v2
