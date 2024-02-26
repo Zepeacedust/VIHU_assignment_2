@@ -16,6 +16,8 @@ jobs:
       run: npm install
     - name: 'debug'
       run: pwd
+    - name: 'oh god why'
+      run: ls
     - name: 'Test'
       run: npm test --coverage.enabled true
     - name: 'Report Coverage'
