@@ -3,8 +3,10 @@ jobs:
   typecheck:
     runs-on: ubuntu-latest
     steps:
+      - name: check
+      run: ls
       - name: Typescript compiler
-        run: tsc -p ./tsconfig.json 
+      run: tsc -p ./tsconfig.json 
   test:
     runs-on: ubuntu-latest
     steps:
