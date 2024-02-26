@@ -17,7 +17,7 @@ jobs:
     - name: 'debug'
       run: pwd
     - name: 'oh god why'
-      run: ls
+      run: ls coverage
     - name: 'Test'
       run: npm test --coverage.enabled true
     - name: 'Report Coverage'
