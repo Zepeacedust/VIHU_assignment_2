@@ -3,37 +3,37 @@ jobs:
   typecheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: 'Install Node'
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-    - name: 'Install Deps'
-      run: npm install
-    - name: check
-      run: ls
-    - name: Typescript compiler
-      run: tsc -p ./tsconfig.json 
+      - uses: actions/checkout@v4
+      - name: "Install Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: "Install Deps"
+        run: npm install
+      - name: check
+        run: ls
+      - name: Typescript compiler
+        run: tsc -p ./tsconfig.json
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: 'Install Node'
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-    - name: 'Install Deps'
-      run: npm install
-    - name: 'debug'
-      run: pwd
-    - name: 'Test'
-      run: npx vitest --coverage
-    - name: 'oh god why'
-      run: ls
-    - name: 'oh god why2'
-      run: ls coverage
-    - name: 'Report Coverage'
-      # Set if: always() to also generate the report if tests are failing
-      # Only works if you set `reportOnFailure: true` in your vite config as specified above
-      if: always() 
-      uses:  davelosert/vitest-coverage-report-action@v2
+      - uses: actions/checkout@v4
+      - name: "Install Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: "Install Deps"
+        run: npm install
+      - name: "debug"
+        run: pwd
+      - name: "Test"
+        run: npx vitest --coverage
+      - name: "oh god why"
+        run: ls
+      - name: "oh god why2"
+        run: ls coverage
+      - name: "Report Coverage"
+        # Set if: always() to also generate the report if tests are failing
+        # Only works if you set `reportOnFailure: true` in your vite config as specified above
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
