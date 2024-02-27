@@ -7,8 +7,8 @@ export function getCurrentYear() : number {
   return new Date().getFullYear();
 }
 
-export function add(date:Date, number:number, type:DATE_UNIT_TYPES = DATE_UNIT_TYPES.DAYS): Date {
-  switch (type) {
+export function a(date:Date, number:number, t:DATE_UNIT_TYPES = DATE_UNIT_TYPES.DAYS): Date {
+  switch (t) {
     case DATE_UNIT_TYPES.DAYS:
       return addDays(date, number)
     case DATE_UNIT_TYPES.MINUTES:

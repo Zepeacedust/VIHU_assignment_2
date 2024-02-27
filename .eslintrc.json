@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint",
+	"ass3"
+    ],
+    "rules": {
+    	"ass3/camelCase": "error",
+	"ass3/noMoment": "error",
+    	"no-console": "error"
+  },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}
