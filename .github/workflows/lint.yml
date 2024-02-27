@@ -1,0 +1,6 @@
+on: [push]
+jobs:
+  line:
+    runs-on: ubuntu-latest
+    steps:
+      run: npx eslint .
